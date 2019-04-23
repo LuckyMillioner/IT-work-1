@@ -1,0 +1,38 @@
+/*
+@author lucky_millioner
+@link http://moria.1586.su/moodle/mod/page/view.php?id=1705
+@link https://github.com/LuckyMillioner/IT-Work-2
+Проектное задание №1
+Калькулятор с возможностью:
+подсчёта равенств по вводу, например: |.\calc FUNCTION(y=8+469*x) SET(x=8)|
+*/
+
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+#include <stdlib.h>
+
+#define ARGNUM 256
+
+int main(int argc, char *argv[]) 
+{
+    int i;
+    char argName[ARGNUM];
+    int argVal[ARGNUM];
+    int argCount = 0;
+    char x, z;
+    int a, b;
+
+    for (i = 1; i < argc; i++) 
+	{
+        if (0 == strncmp(argv[i], "SET", strlen("SET"))) //проверяем строку на SET
+	{
+            parseSet(argv[i], argName, argVal, &argCount);
+        }
+        if (0 == strncmp(argv[i], "FUNCTION", strlen("FUNCTION"))) //проверяем строку на FUNCTION
+	{
+            parseFunction(argv[i], &x, &z, &a, &b);
+	{
+    computeFunction(argName, argVal, &argCount, &a, &b, &z, &x);
+    return 0;
+}
