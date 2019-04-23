@@ -25,13 +25,14 @@ int main(int argc, char *argv[])
 
     for (i = 1; i < argc; i++) 
 	{
-        if (0 == strncmp(argv[i], "SET", strlen("SET"))) 
-		{
+        if (0 == strncmp(argv[i], "SET", strlen("SET"))) //проверяем строку на SET
+	{
             parseSet(argv[i], argName, argVal, &argCount);
         }
-        if (0 == strncmp(argv[i], "FUNCTION", strlen("FUNCTION")))
+        if (0 == strncmp(argv[i], "FUNCTION", strlen("FUNCTION"))) //проверяем строку на FUNCTION
+	{
             parseFunction(argv[i], &x, &z, &a, &b);
-    }
+	{
     computeFunction(argName, argVal, &argCount, &a, &b, &z, &x);
     return 0;
 }
