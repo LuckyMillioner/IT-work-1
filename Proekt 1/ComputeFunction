@@ -26,7 +26,7 @@ int parseFunction(char *str, char *y, char *x, int *a, int *b)
 }
 
 /*
-@example UNCTION(z=8+1*y) |a = 1 , x = y|
+@example FUNCTION(z=8+1*y) |a = 1 , x = y|
 @param str(текущий аргумент)
 @return 0
 @throws -
@@ -52,7 +52,7 @@ int getAX(char *str, char *x, int *a)
 }
 
 /*
-@example UNCTION(z=8+1*x) |b = 8|
+@example FUNCTION(z=8+1*x) |b = 8|
 @param str(текущий аргумент)
 @return 0
 @throws -
