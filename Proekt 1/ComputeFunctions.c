@@ -3,13 +3,6 @@
 #include <ctype.h>
 #include <stdlib.h>
 
-int parseFunction(char *str, char *y, char *x, int *a, int *b);
-int parseSet(char *str, char *argName, int *argVal, int *argCnt);
-int computeFunction(char *argName, int *argVal, int argCnt, int a, int b, char x, char y);
-int getY(char *str, char *y);
-int getAX(char *str, char *x, int *a);
-int getB(char *str, int *b);
-
 /*
 @example FUNCTION(y=8+46*x) |y = y, b = 8, a = 46, x = x|
 @param str(текущий аргумент)
